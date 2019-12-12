@@ -29,7 +29,7 @@ DEBUG = True
 # LOGIN_URL = '/auth/login'
 ALLOWED_HOSTS = []
 
-from django.contrib.sessions.models import Session
+#from django.contrib.sessions.models import Session
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'test_app'
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -59,6 +60,8 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 # 'django.contrib.sessions.backends.cache'
 # 'django.contrib.sessions.backends.cached_db'
 # 'django.contrib.sessions.backends.signed_cookies'
+
+SESSION_SAVE_EVERY_REQUEST = True
 
 ROOT_URLCONF = 'auth_security.urls'
 

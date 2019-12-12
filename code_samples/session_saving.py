@@ -10,6 +10,6 @@ request.session['foo'] = {}
 
 # Gotcha: Session is NOT modified, because this alters
 # request.session['foo'] instead of request.session.
-request.session['foo']['bar'] = 'baz'
+# request.session['foo']['bar'] = 'baz'
 
-### request.session.modified = True
+request.session.modified = True

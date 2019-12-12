@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 
 from .models import Comment, Member
+from django.contrib.auth import authenticate
 
 
 def post_comment(request, new_comment):
@@ -31,3 +32,11 @@ def logout(request):
     except KeyError:
         pass
     return HttpResponse("You're logged out.")
+
+
+def auth(request):
+    user  = authenticate(username='darya', password='useruser')
+    if user is not None:
+        return HttpResponse(f"User - {user} is valid, active and authenticated")
+    else:
+        return HttpResponse("Incorrect username or password")

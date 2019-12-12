@@ -9,7 +9,6 @@ else:
 
 
 
-"""
 Request
 
 if request.user.is_authenticated:
@@ -19,4 +18,4 @@ else:
     # Do something for anonymous users.
     …
 
-"""
+

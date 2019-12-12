@@ -1,5 +1,15 @@
+<!--
 {% if user.is_authenticated %}
 	<p>Welcome, {{ user.username }}. Thanks for logging in.</p>
 {% else %}
 	<p>Welcome, new user. Please log in.</p>
+{% endif %}
+{{perms.test_app.can_delete}} permisions (user.has_module_perms('test_app'))
+-->
+
+{% if perms.something %}
+you have --permisions	
+	{% if perms.something.can_delete %}
+	{% endif %}
+
 {% endif %}
